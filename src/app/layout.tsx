@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from '@/theme';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "@/theme";
 import NavBar from "@/components/organism/NavBar/NavBar";
-
-export const metadata:Metadata = {
-
-};
+export const metadata: Metadata = {};
 
 export default function RootLayout({
   children,
@@ -15,14 +12,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{margin:0}}>
+      <body style={{ margin: 0 }}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <NavBar/>
-        {children}
-        </ThemeProvider>
+            <NavBar />
+
+            {children}
+          </ThemeProvider>
         </AppRouterCacheProvider>
-        </body>
+      </body>
     </html>
   );
 }
