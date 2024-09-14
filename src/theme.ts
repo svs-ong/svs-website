@@ -36,28 +36,45 @@ const colorPalette = {
   },
 }
 const theme = createTheme({
+
   palette: colorPalette,
+
   typography: {
+
     subtitle1: {
       fontSize: 12,
     },
+
     body1: {
       fontWeight: 500,
     },
+
     button: {
       fontStyle: 'bold',
     },
+
   },
   components: {
+
+    MuiIconButton:{
+      defaultProps  :{
+        disableRipple:true,
+      },
+    },
+
     MuiButton: {
+
+      defaultProps  :{
+        disableRipple:true,
+      },
+
       styleOverrides: {
         root: {
           borderRadius: 11,
           height: "40px",
         },
-        text: {
-          disableRipple:true,
-          disableFocusRipple: true,
+
+        text: {  
           color: colorPalette.primary.main,
           fontSize: "16px",
           '&:hover': {
@@ -65,6 +82,7 @@ const theme = createTheme({
             backgroundColor: "transparent",
           },
         },
+
         outlined: {
           borderColor: colorPalette.background.paper,
           color: colorPalette.background.paper,
@@ -75,6 +93,7 @@ const theme = createTheme({
             borderColor: colorPalette.action.hover,
           },
         },
+
         contained: {
           backgroundColor: colorPalette.primary.main,
           color: colorPalette.background.paper,
@@ -83,8 +102,10 @@ const theme = createTheme({
             backgroundColor: colorPalette.action.active,
           },
         },
+
       },
     },
+
   MuiLink: {
   styleOverrides: {
     root: {
@@ -94,6 +115,7 @@ const theme = createTheme({
     },
   },
 },
+
   MuiTypography: {
   styleOverrides: {
     root: {
@@ -101,6 +123,7 @@ const theme = createTheme({
     },
   },
 },
+
   },
 });
 
