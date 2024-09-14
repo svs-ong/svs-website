@@ -57,6 +57,8 @@ const theme = createTheme({
           textTransform: "uppercase",
         },
         text: {
+          disableRipple:true,
+          disableFocusRipple: true,
           color: colorPalette.primary.main,
           fontSize: "16px",
           '&:hover': {
@@ -66,7 +68,7 @@ const theme = createTheme({
         },
         outlined: {
           borderColor: colorPalette.background.paper,
-          color: "inherit",
+          color: colorPalette.background.paper,
           fontSize: "16px",
           '&:hover': {
             backgroundColor: colorPalette.action.hover,

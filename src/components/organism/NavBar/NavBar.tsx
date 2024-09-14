@@ -18,7 +18,6 @@ interface Props {
 }
 
 
-
 enum RoutePaths {
   Home = "/",
   Projects = "/projects",
@@ -66,6 +65,7 @@ function ElevationScroll(props: Props) {
 }
 
 const NavBar: React.FC = () => {
+  const theme = useTheme();
   return (
     <ElevationScroll>
       <AppBar
@@ -117,7 +117,8 @@ const NavBar: React.FC = () => {
               <Link key={item.href} href={item.href} passHref>
                 <Button
                   variant={item.variant}
-                >
+                sx={{ color: "white" }}
+                >{item.label}
                 </Button>
               </Link>
             ))}
