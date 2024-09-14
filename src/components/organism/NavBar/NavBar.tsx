@@ -4,23 +4,49 @@ import {
   AppBar,
   Typography,
   useScrollTrigger,
-  Toolbar,
   Stack,
   IconButton,
   Button,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   window?: () => Window;
   children?: React.ReactElement<any>;
 }
 
+const theme = useTheme();
+
+enum RoutePaths {
+  Home = "/",
+  Projects = "/projects",
+  AboutUs = "/about-us",
+  RedirectTax = "/redirect-tax",
+  JoinUs = "/join-us",
+}
+
+interface NavItem {
+  label: string;
+  href: RoutePaths;
+  variant: "text" | "outlined";
+}
+
+const navConfig: NavItem[] = [
+  { label: "Acasa", href: RoutePaths.Home, variant: "text" },
+  { label: "Proiecte", href: RoutePaths.Projects, variant: "text" },
+  { label: "Despre noi", href: RoutePaths.AboutUs, variant: "text" },
+  { label: "Redirectioneaza 3.5%", href: RoutePaths.RedirectTax, variant: "text" },
+  { label: "Join Us", href: RoutePaths.JoinUs, variant: "outlined" },
+];
+
+
+
 function ElevationScroll(props: Props) {
   const { children, window } = props;
 
-  const theme = useTheme();
+
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -46,7 +72,7 @@ const NavBar: React.FC = () => {
         position="sticky"
         sx={{
           height: "64px",
-          margin: "0 auto",
+          margin: "0",
           padding: " 0 40px",
           justifyItems: "center",
         }}
@@ -69,73 +95,32 @@ const NavBar: React.FC = () => {
               style={{ textDecoration: "none", alignContent: "center" }}
             >
               <IconButton color="primary" sx={{ alignContent: "center" }}>
-                <img
+                <Image
                   src="https://www.svgrepo.com/show/520508/student.svg"
-                  height={"50px"}
-                  width={"50px"}
-                ></img>
+                  alt="Student Icon"
+                  height={50}
+                  width={50}
+                />
               </IconButton>
             </Link>
             <Typography variant="body1" sx={{ alignContent: "center" }}>
               Studenti Pentru Viitori Studenti
             </Typography>
           </Stack>
-
           <Stack
             alignContent="center"
             direction={"row"}
             justifyContent={"space-between"}
             spacing={3}
           >
-            <Link
-              href="#"
-              passHref
-              style={{ textDecoration: "none", alignContent: "center" }}
-            >
-              <Typography variant="body1" color="background.paper">
-                Acasa
-              </Typography>
-            </Link>
-            <Link
-              href="/"
-              passHref
-              style={{ textDecoration: "none", alignContent: "center" }}
-            >
-              <Typography variant="body1" color="background.paper">
-                Proiecte
-              </Typography>
-            </Link>
-            <Link
-              href="/"
-              passHref
-              style={{ textDecoration: "none", alignContent: "center" }}
-            >
-              <Typography variant="body1" color="background.paper">
-                Despre noi
-              </Typography>
-            </Link>
-            <Link
-              href="/"
-              passHref
-              style={{ textDecoration: "none", alignContent: "center" }}
-            >
-              <Typography variant="body1" color="background.paper">
-                Redirectioneaza 3.5%
-              </Typography>
-            </Link>
-            <Link
-              href="/join-us"
-              passHref
-              style={{ textDecoration: "none", alignContent: "center" }}
-            >
-              <Button
-                variant="outlined"
-                color="inherit"
-                sx={{ color: "white" }}
-              >
-                Join Us
-              </Button>
-            </Link>
+            {navConfig.map((item) => (
+              <Link key={item.href} href={item.href} passHref>
+                <Button
+                  variant={item.variant}
+                >
+                </Button>
+              </Link>
+            ))}
           </Stack>
         </Stack>
       </AppBar>
