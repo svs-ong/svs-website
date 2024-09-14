@@ -17,7 +17,7 @@ interface Props {
   children?: React.ReactElement<any>;
 }
 
-const theme = useTheme();
+
 
 enum RoutePaths {
   Home = "/",
@@ -46,7 +46,7 @@ const navConfig: NavItem[] = [
 function ElevationScroll(props: Props) {
   const { children, window } = props;
 
-
+  const theme = useTheme();
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
