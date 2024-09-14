@@ -54,7 +54,6 @@ const theme = createTheme({
         root: {
           borderRadius: 11,
           height: "40px",
-          textTransform: "uppercase",
         },
         text: {
           disableRipple:true,

@@ -117,7 +117,7 @@ const NavBar: React.FC = () => {
               <Link key={item.href} href={item.href} passHref>
                 <Button
                   variant={item.variant}
-                sx={{ color: "white" }}
+                  sx={{ color: "white", textTransform: "none" }}
                 >{item.label}
                 </Button>
               </Link>
