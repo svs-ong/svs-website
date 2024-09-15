@@ -35,19 +35,35 @@ const colorPalette = {
     hover: "#fc6400",
   },
 }
+const typography =
+{
+  h3:
+  {
+    fontSize : 49,
+    fontWeight: 500,
+    fontFamily: montserrat.style.fontFamily
+  },
+  h4:
+  {
+    fontSize : 35,
+    fontWeight: 500,
+    fontFamily: montserrat.style.fontFamily
+  },
+  h5:
+  {
+    fontSize : 24,
+    fontWeight: 500,
+    fontFamily: roboto.style.fontFamily
+  },
+  body1:
+  {
+    fontSize : 16,
+    fontFamily: roboto.style.fontFamily
+  }
+}
 const theme = createTheme({
   palette: colorPalette,
-  typography: {
-    subtitle1: {
-      fontSize: 12,
-    },
-    body1: {
-      fontWeight: 500,
-    },
-    button: {
-      fontStyle: 'bold',
-    },
-  },
+  typography: typography,
   components: {
     MuiButton: {
       styleOverrides: {
@@ -95,14 +111,16 @@ const theme = createTheme({
     },
   },
 },
-  MuiTypography: {
-  styleOverrides: {
-    root: {
-      alignContent: "center",
-    },
+  MuiContainer: {
+    styleOverrides: {
+      root: {
+        padding : "100px 0px" ,
+      },
+    }
   },
 },
-  },
 });
+
+
 
 export default theme;

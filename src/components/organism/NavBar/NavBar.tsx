@@ -21,9 +21,9 @@ interface Props {
 enum RoutePaths {
   Home = "/",
   Projects = "/projects",
-  AboutUs = "/about-us",
+  AboutUs = "/about",
   RedirectTax = "/redirect-tax",
-  JoinUs = "/join-us",
+  JoinUs = "/join",
 }
 
 interface NavItem {
