@@ -18,7 +18,7 @@ const VISION_TITLE_TEXT : string = `Viziunea Noastră`
 const HomePage: React.FC = () => {
   return (
     <Stack>
-      <GenericSection title={VISION_TITLE_TEXT} description={VISION_TEXT} image={VISION_IMAGE}/>
+      <GenericSection title={VISION_TITLE_TEXT} description={VISION_TEXT} image={VISION_IMAGE} altImage="SvS-Vision-Image"/>
     </Stack>
 );
 };

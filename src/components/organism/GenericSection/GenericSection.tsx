@@ -4,16 +4,17 @@ import { Roboto } from "next/font/google";
 import { Box } from "@mui/material";
 import { Interface } from "readline";
 import { title } from "process";
-import Image from "next/image";
 import { TextStack } from "@/components/atomic/TextStack/TextStack";
+import { Image } from "@/components/atomic/Image/Image";
 
 interface GenericSectionProps {
   title: string;
   description: string[];
   image: string;
+  altImage : string;
 }
 
-export const GenericSection: React.FC<GenericSectionProps> = ({ title, description, image }) => {
+export const GenericSection: React.FC<GenericSectionProps> = ({ title, description, image , altImage}) => {
   return (
     <Container>
       <Stack
@@ -23,10 +24,7 @@ export const GenericSection: React.FC<GenericSectionProps> = ({ title, descripti
     >
       <Image
       src={image}
-      width={500}
-      height={500}
-      alt="Picture of the author"
-      />
+      alt = {altImage}/>
       <Stack
         direction="column"
         spacing={2}

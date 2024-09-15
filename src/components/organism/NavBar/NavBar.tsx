@@ -11,6 +11,7 @@ import {
 import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "@/components/svsLogo.png";
 
 interface Props {
   window?: () => Window;
@@ -85,6 +86,7 @@ const NavBar: React.FC = () => {
         >
           <Stack
             alignContent="center"
+            alignItems="center"
             direction={"row"}
             justifyContent={"space-between"}
             spacing={3}
@@ -92,15 +94,21 @@ const NavBar: React.FC = () => {
             <Link
               href="/"
               passHref
-              style={{ textDecoration: "none", alignContent: "center" }}
+              style={{ alignContent: "center" }}
             >
-              <IconButton color="primary" sx={{ alignContent: "center" }}>
-                <Image
-                  src="https://www.svgrepo.com/show/520508/student.svg"
-                  alt="Student Icon"
-                  height={50}
-                  width={50}
-                />
+              <IconButton color="primary" sx={{
+                padding: "0",
+                height: "auto",
+                width: "auto",
+              }}>
+              <Image priority
+                src={Logo}
+                alt={""}
+                height={60}
+                width={60}
+
+              >
+              </Image>
               </IconButton>
             </Link>
             <Typography variant="body1" sx={{ alignContent: "center" }}>
@@ -117,7 +125,7 @@ const NavBar: React.FC = () => {
               <Link key={item.href} href={item.href} passHref>
                 <Button
                   variant={item.variant}
-                sx={{ color: "white" }}
+                  sx={{ color: "white", textTransform: "none" }}
                 >{item.label}
                 </Button>
               </Link>
