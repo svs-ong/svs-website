@@ -23,15 +23,17 @@ const VISION_IMAGE: string = `/images/about/Our-Vision-Image.jpg`;
 const VISION_TITLE_TEXT: string = `Viziunea Noastră`;
 const HomePage: React.FC = () => {
   return (
-    <Stack>
-      <HeroSection title={''} />
+    // <Stack sx={{ flex: 1, minWidth: '100vh' }}>
+    <>
+      <HeroSection title={'Despre Noi'} />
       <GenericSection
         title={VISION_TITLE_TEXT}
         description={VISION_TEXT}
         image={VISION_IMAGE}
         altImage="SvS-Vision-Image"
       />
-    </Stack>
+    </>
+    // </Stack>
   );
 };
 
