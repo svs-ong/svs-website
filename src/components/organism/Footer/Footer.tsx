@@ -1,32 +1,37 @@
+"use client";
 import React from "react";
 import {
-  AppBar,
   Typography,
   Stack,
   IconButton,
-  Button,
+  Box,
 } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+;
 import Link from "next/link";
-import Image from "next/image";
-import Logo from "@/components/svsLogo.png";
+// import Image from "next/image";
+// import Logo from "@/components/svsLogo.png";
 import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+// import YouTubeIcon from '@mui/icons-material/YouTube';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
+import { useTheme } from "@mui/material/styles"
 const Footer: React.FC = () => {
     const theme = useTheme();
+    {/* Please find a way to split your code. You can make subcomponents of Footer */}
     return (
-        <AppBar color="primary"
+        <Box 
         sx={{
           height: "200px",
           margin: "0",
           bottom: "0",
           padding: " 0 178px",
-        }}>
+          backgroundColor: theme.palette.primary.main,
+        }}
+        >
 
+        
         <Stack
           direction="column"
           justifyContent="space-between"
@@ -76,15 +81,21 @@ const Footer: React.FC = () => {
                 padding: "0",
                 height: "auto",
                 width: "auto",
+            
               }}>
-              <Image
+                {/* Use this instead of image */}
+                <InstagramIcon/>
+
+                
+              {/* <Image
                 src={InstagramIcon}
                 alt={""}
                 height={20}
                 width={20}
+              /> */}
+              
 
-              >
-              </Image>
+
               </IconButton>
               </Link>
 
@@ -94,14 +105,15 @@ const Footer: React.FC = () => {
                 height: "auto",
                 width: "auto",
               }}>
+              
+              {/* 
+              
               <Image
                 src={FacebookIcon}
                 alt={""}
                 height={20}
                 width={20}
-
-              >
-              </Image>
+              /> */}
               </IconButton>
               </Link>
 
@@ -111,35 +123,32 @@ const Footer: React.FC = () => {
                 height: "auto",
                 width: "auto",
               }}>
-              <Image
+
+              {/* <Image
                 src={YoutubeIcon}
                 alt={""}
                 height={20}
                 width={20}
-
-              >
-              </Image>
+              /> */}
               </IconButton>
               </Link>
 
               <Link href="https://www.linkedin.com/company/asociatia-svs/">
-        <IconButton color="primary" sx={{
+            <IconButton color="primary" sx={{
                 padding: "0",
                 height: "auto",
                 width: "auto",
               }}>
-              <Image
+              {/* <Image
                 src={LinkedInIcon}
                 alt={""}
                 height={20}
                 width={20}
-
-              >
-              </Image>
+              /> */}
               </IconButton>
               </Link>
         </Stack>
-      </AppBar>
+      </Box>
     )
 }
 
