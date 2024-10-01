@@ -35,6 +35,7 @@ export const OurValuesSection: React.FC<OurValuesSectionProps> = ({ title }) => 
                 <Stack
                     direction='row'
                     spacing={20} // 160px spacing (20 * 8px) on both sides
+                    justifyContent={'center'}
                 >
                     <Container
                         maxWidth={false}
