@@ -2,6 +2,8 @@
 import { Montserrat, Roboto } from "next/font/google";
 import { createTheme } from "@mui/material/styles";
 import { colors } from "@mui/material";
+import { common } from "@mui/material/colors";
+import { info } from "console";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -17,22 +19,25 @@ const montserrat = Montserrat({
 
 const colorPalette = {
   primary: {
-    main: "#002459",
-    light: "#1F3659",
-    dark: "#3D4859",
-  },
-  background: {
-    paper: "#FFFFFF",
-    default: "#000000",
+    main: "#06255b",
+    light: "#3e485a",
+    dark: "#22375a",
   },
   secondary: {
-    main: "#D9FCFA",
-    light: "#EBFCFB",
-    dark: "#C7FCF9",
+    main: "#f8af7a",
+    light: "#f9d5bc",
+    dark: "#f56100",
   },
-  action: {
-    active: "#fc6400",
-    hover: "#fc6400",
+  common: {
+    white : "#ffffff",
+    black : "#000000",
+  },
+  grey:{
+    300 : "#ebebeb",
+    900 : "#212121",
+  },
+  info:{
+    main : "#e9f9ff",
   },
 }
 const typography =
@@ -41,13 +46,13 @@ const typography =
   {
     fontSize : 49,
     fontWeight: 500,
-    fontFamily: montserrat.style.fontFamily
+    fontFamily: roboto.style.fontFamily
   },
   h4:
   {
     fontSize : 35,
     fontWeight: 500,
-    fontFamily: montserrat.style.fontFamily
+    fontFamily: roboto.style.fontFamily
   },
   h5:
   {
@@ -86,31 +91,31 @@ const theme = createTheme({
         },
 
         text: {  
-          color: colorPalette.primary.main,
+          color: colorPalette.common.white,
           fontSize: "16px",
           '&:hover': {
-            color: colorPalette.action.active,
+            color: colorPalette.secondary.dark,
             backgroundColor: "transparent",
           },
         },
 
         outlined: {
-          borderColor: colorPalette.background.paper,
-          color: colorPalette.background.paper,
+          borderColor: colorPalette.common.white,
+          color: colorPalette.common.white,
           fontSize: "16px",
           '&:hover': {
-            backgroundColor: colorPalette.action.hover,
-            color: colorPalette.background.paper,
-            borderColor: colorPalette.action.hover,
+            // backgroundColor: colorPalette.secondary.dark,
+            color: colorPalette.secondary.dark,
+            borderColor: colorPalette.secondary.dark,
           },
         },
 
         contained: {
           backgroundColor: colorPalette.primary.main,
-          color: colorPalette.background.paper,
+          color: colorPalette.common.white,
           fontSize: "16px",
           '&:hover': {
-            backgroundColor: colorPalette.action.active,
+            backgroundColor: colorPalette.secondary.dark,
           },
         },
 
@@ -120,7 +125,7 @@ const theme = createTheme({
   MuiLink: {
   styleOverrides: {
     root: {
-      color: colorPalette.background.paper,
+      color: colorPalette.common.white,
       underline: "none",
       alignContent: "center",
     },
