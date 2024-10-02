@@ -5,18 +5,13 @@ import theme from '@/theme';
 
 interface OurValuesSectionProps {
     title: string;
-    image: string[];
-    values_title: string[];
-    values_tesxt: string[];
 }
 
 export const OurValuesSection: React.FC<OurValuesSectionProps> = ({ title }) => {
     return (
         <Container
-            maxWidth={false}
             sx={{
-                backgroundColor: theme.palette.background.paper,
-                height: '300px'
+                backgroundColor: theme.palette.background.paper
             }}
         >
             <Stack paddingBottom='164px'>
@@ -31,40 +26,27 @@ export const OurValuesSection: React.FC<OurValuesSectionProps> = ({ title }) => 
                     {title}
                 </Typography>
 
-
+                
                 <Stack
                     direction='row'
-                    spacing={20} // 160px spacing (20 * 8px) on both sides
-                    justifyContent={'center'}
+                    spacing={2} // 160px spacing (20 * 8px) on both sides
+                    justifyContent={'space-between'}
                 >
-                    <Container
-                        maxWidth={false}
-                        sx={{
-                            backgroundColor: theme.palette.primary.main,
-                            height: '400px',
-                            width: '300px',
-                        }}
-                    >
-                    </Container>
-                    <Container
-                        maxWidth={false}
-                        sx={{
-                            backgroundColor: theme.palette.primary.main,
-                            height: '400px',
-                            width: '300px',
-                        }}
-                    >
-                    </Container>
-                    <Container
-                        maxWidth={false}
-                        sx={{
-                            backgroundColor: theme.palette.primary.main,
-                            height: '400px',
-                            width: '300px',
-                        }}
-                    >
-                    </Container>
+                    {
+                        [1,2,3].map
+                        (()=>{
+                            return ( 
+                            <Box
+                                sx={{
+                                    backgroundColor: theme.palette.primary.main,
+                                    height: '400px',
+                                    flexGrow: 1,
+                                }}
+                            />);
+                        })
+                    }
                 </Stack>
+
             </Stack>
         </Container>
     );
