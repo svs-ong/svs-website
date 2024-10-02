@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 import { GenericSection } from '@/components/organism/GenericSection/GenericSection';
 import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
 import TeamCard from "@/app/team-component";
+import TeamSection from '../team-section';
 
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
@@ -33,7 +34,7 @@ const HomePage: React.FC = () => {
         image={VISION_IMAGE}
         altImage="SvS-Vision-Image"
       />
-      <TeamCard description='Andrei' imageUrl=''></TeamCard>
+      <TeamSection description='Andrei' imageUrl=''></TeamSection>
     </>
     // </Stack>
   );

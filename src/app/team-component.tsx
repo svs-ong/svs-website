@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import {Stack, Typography} from "@mui/material";
+import {Stack, Typography,Box} from "@mui/material";
 import { Image } from "@/components/atomic/Image/Image";
 import theme from "@/theme";
 
@@ -23,8 +23,13 @@ const mockData = [
 
 const TeamCard: React.FC<data> = ({ description, imageUrl }) => {
     return (
-        <Stack sx={{backgroundColor:theme.palette.primary.main}}>
-            <Image src={imageUrl} alt="Image not found!" />
+        <Stack sx={{ width:240, height:300,justifyContent: 'center',alignItems: 'center'}} direction={'column'}
+        spacing={1}>
+            {/* <Image src={imageUrl} alt="Image not found!"/> */}
+            <Box
+            sx={{width:240, height:240, backgroundColor:theme.palette.secondary.main}}>
+
+            </Box>
             <Typography variant='h5'>{description}</Typography>
         </Stack>
     );
