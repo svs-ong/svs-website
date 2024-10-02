@@ -6,6 +6,7 @@ import { GenericSection } from '@/components/organism/GenericSection/GenericSect
 import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
 import { Section } from '@/components/atomic/Section/Section';
 import { SectionVariants } from '@/components/atomic/Section/types';
+import TeamSection from '../team-section';
 
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
