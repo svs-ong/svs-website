@@ -1,38 +1,31 @@
 'use client';
 import React from 'react';
 import theme from '@/theme';
-enum SectionVariants {
-  white = 'white',
-  black = 'black',
-  primary = 'primary',
-  secondary = 'secondary',
-}
+import { Box, Container, ContainerProps, Typography } from '@mui/material';
+import { SectionVariants } from './types';
 
 interface SectionProps {
-  marginBottom: number;
-  marginTop: number;
   variant: SectionVariants;
-  bgColor?: string;
+  children?: React.ReactNode;
 }
 
-const Section: React.FC<SectionProps> = ({ marginBottom, marginTop, variant, bgColor }) => {
+export const Section: React.FC<SectionProps> = ({ variant, children }) => {
   const getBackgroundColor = () => {
     switch (variant) {
       case SectionVariants.white:
         return theme.palette.common.white;
-
-      case SectionVariants.black:
-        return theme.palette.common.black;
-
       case SectionVariants.primary:
         return theme.palette.primary.main;
-
-      case SectionVariants.secondary:
-        return theme.palette.secondary.main;
       default:
-        return bgColor || 'transparent';
+        return theme.palette.primary.main;
     }
   };
-  return <>GIT</>;
+
+  return (
+    <Box sx={{ flexgrow: 1, backgroundColor: getBackgroundColor() }}>
+      <Container sx={{ display: 'flex', alignContent: 'center', justifyContent: 'center' }}>
+        {children}
+      </Container>
+    </Box>
+  );
 };
-export default Section;
