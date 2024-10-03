@@ -35,11 +35,8 @@ const HomePage: React.FC = () => {
       />
       <OurValuesSection
         title={'Valorile Noastre'}
-        image={[]}
-        values_title={['Autenticitate', 'Inclusivitate', 'Comunitate']}
-        values_tesxt={[]} />
+      />
     </>
-    // </Stack>
   );
 };
 
