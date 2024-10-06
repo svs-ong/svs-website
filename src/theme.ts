@@ -134,7 +134,7 @@ const theme = createTheme({
   MuiContainer: {
     styleOverrides: {
       root: {
-        padding : "100px 0px" ,
+        padding : "50px 0px" ,
       },
     }
   },

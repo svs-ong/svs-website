@@ -4,6 +4,7 @@ import { Roboto } from 'next/font/google';
 import { Box } from '@mui/material';
 import { GenericSection } from '@/components/organism/GenericSection/GenericSection';
 import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
+import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
 
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
@@ -32,8 +33,10 @@ const HomePage: React.FC = () => {
         image={VISION_IMAGE}
         altImage="SvS-Vision-Image"
       />
+      <OurValuesSection
+        title={'Valorile Noastre'}
+      />
     </>
-    // </Stack>
   );
 };
 
