@@ -4,12 +4,10 @@ import { Roboto } from 'next/font/google';
 import { Box } from '@mui/material';
 import { GenericSection } from '@/components/organism/GenericSection/GenericSection';
 import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
-<<<<<<< HEAD
 import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
-=======
 import { Section } from '@/components/atomic/Section/Section';
 import { SectionVariants } from '@/components/atomic/Section/types';
->>>>>>> 6492e84b878ad4b6b9aa08c38687e81ad5af1568
+import { EventCard } from '@/components/organism/EventCard/EventCard';
 
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
@@ -30,18 +28,19 @@ const VISION_TITLE_TEXT: string = `Viziunea Noastră`;
 const HomePage: React.FC = () => {
   return (
     // <Stack sx={{ flex: 1, minWidth: '100vh' }}>
-    <>
-      <HeroSection title={'Despre Noi'} />
-      <GenericSection
-        title={VISION_TITLE_TEXT}
-        description={VISION_TEXT}
-        image={VISION_IMAGE}
-        altImage="SvS-Vision-Image"
-      />
-      <OurValuesSection
-        title={'Valorile Noastre'}
-      />
-    </>
+    // <>
+    //   <HeroSection title={'Despre Noi'} />
+    //   <GenericSection
+    //     title={VISION_TITLE_TEXT}
+    //     description={VISION_TEXT}
+    //     image={VISION_IMAGE}
+    //     altImage="SvS-Vision-Image"
+    //   />
+    //   <OurValuesSection
+    //     title={'Valorile Noastre'}
+    //   />
+    // </>
+    <EventCard title={'SVS SESSIONS'} image='/images/about/Our-Vision-Image.jpg' altImage='Image not found' description={'SVS Sessions aduce în fața participanților studenți entuziaști și experimentați care împărtășesc povestea lor personală. Acești studenți vorbesc despre facultatea la care sunt înscrisi, descriind programele de studiu, materiile și opțiunile extracurriculare disponibile.'}></EventCard>
   );
 };
 
