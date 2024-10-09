@@ -4,7 +4,12 @@ import { Roboto } from 'next/font/google';
 import { Box } from '@mui/material';
 import { GenericSection } from '@/components/organism/GenericSection/GenericSection';
 import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
+<<<<<<< HEAD
 import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
+=======
+import { Section } from '@/components/atomic/Section/Section';
+import { SectionVariants } from '@/components/atomic/Section/types';
+>>>>>>> 6492e84b878ad4b6b9aa08c38687e81ad5af1568
 
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
