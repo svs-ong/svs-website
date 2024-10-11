@@ -4,6 +4,8 @@ import { Roboto } from 'next/font/google';
 import { Box } from '@mui/material';
 import { GenericSection } from '@/components/organism/GenericSection/GenericSection';
 import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
+import { Section } from '@/components/atomic/Section/Section';
+import { SectionVariants } from '@/components/atomic/Section/types';
 import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
 
 const VISION_TEXT: string[] = [
