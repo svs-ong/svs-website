@@ -7,8 +7,7 @@ import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
 import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
 import { Section } from '@/components/atomic/Section/Section';
 import { SectionVariants } from '@/components/atomic/Section/types';
-import TeamSection from '../team-section''
-import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
+import TeamSection from '../../components/organism/TeamSection/team-section';
 import { EventCard } from '@/components/organism/EventCard/EventCard';
 
 const VISION_TEXT: string[] = [
@@ -42,7 +41,7 @@ const HomePage: React.FC = () => {
     //     title={'Valorile Noastre'}
     //   />
     // </>
-    <EventCard title={'SVS SESSIONS'} image='/images/about/Our-Vision-Image.jpg' altImage='Image not found' description={'SVS Sessions aduce în fața participanților studenți entuziaști și experimentați care împărtășesc povestea lor personală. Acești studenți vorbesc despre facultatea la care sunt înscrisi, descriind programele de studiu, materiile și opțiunile extracurriculare disponibile.'}></EventCard>
+    <EventCard title={'SVS SESSIONS'} image={VISION_IMAGE} altImage='Image not found' description={'SVS Sessions aduce în fața participanților studenți entuziaști și experimentați care împărtășesc povestea lor personală. Acești studenți vorbesc despre facultatea la care sunt înscrisi, descriind programele de studiu, materiile și opțiunile extracurriculare disponibile.'}></EventCard>
   );
 };
 
