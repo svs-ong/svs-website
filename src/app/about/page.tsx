@@ -6,8 +6,9 @@ import { GenericSection } from '@/components/organism/GenericSection/GenericSect
 import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
 import { Section } from '@/components/atomic/Section/Section';
 import { SectionVariants } from '@/components/atomic/Section/types';
-import TeamSection from '../team-section''
+import TeamSection from '../team-section';
 import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
+import shrek from '@/components/shrek.png';
 
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
@@ -29,7 +30,7 @@ const HomePage: React.FC = () => {
   return (
     // <Stack sx={{ flex: 1, minWidth: '100vh' }}>
     <>
-      <HeroSection title={'Despre Noi'} />
+      <HeroSection title={'Despre Noi'} image_url={shrek} />
       <GenericSection
         title={VISION_TITLE_TEXT}
         description={VISION_TEXT}

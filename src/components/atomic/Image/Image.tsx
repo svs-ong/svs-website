@@ -16,6 +16,7 @@ export const Image : React.FC<ImageProps> = ({src , alt}) =>{
                 layout="fill"
                 objectFit="cover"
             />
+
         </Box>
     )
 }

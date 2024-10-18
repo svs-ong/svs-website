@@ -7,9 +7,10 @@ import { SectionVariants } from './types';
 interface SectionProps {
   variant: SectionVariants;
   children?: React.ReactNode;
+  backgroundImage?: string;
 }
 
-export const Section: React.FC<SectionProps> = ({ variant, children }) => {
+export const Section: React.FC<SectionProps> = ({ variant, children, backgroundImage }) => {
   const getBackgroundColor = () => {
     switch (variant) {
       case SectionVariants.white:
@@ -22,8 +23,8 @@ export const Section: React.FC<SectionProps> = ({ variant, children }) => {
   };
 
   return (
-    <Box sx={{ flexgrow: 1, backgroundColor: getBackgroundColor() }}>
-      <Container sx={{ display: 'flex', alignContent: 'center', justifyContent: 'center' }}>
+    <Box sx={{ flexgrow: 1, backgroundColor: getBackgroundColor(),  }}>
+      <Container sx={{ display: 'flex', alignContent: 'center', justifyContent: 'center', backgroundImage:backgroundImage?'url(${backgroundImage)}':"none", }}>
         {children}
       </Container>
     </Box>
