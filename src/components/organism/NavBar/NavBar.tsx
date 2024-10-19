@@ -4,7 +4,7 @@ import { AppBar, Typography, useScrollTrigger, Stack, IconButton, Button } from 
 import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '@/components/svsLogo.png';
+import Logo from '@/svsLogo.png';
 
 interface Props {
   window?: () => Window;

@@ -1,16 +1,12 @@
-import React from 'react';
-import { Button, Container, Stack, Typography } from '@mui/material';
-import { Roboto } from 'next/font/google';
-import { Box } from '@mui/material';
-import { GenericSection } from '@/components/organism/GenericSection/GenericSection';
-import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
-import { Section } from '@/components/atomic/Section/Section';
-import { SectionVariants } from '@/components/atomic/Section/types';
-import TeamSection from '../team-section';
-import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
-import shrek from '@/components/shrek.png';
+import React from "react";
+import { Stack } from "@mui/material";
+import { GenericSection } from "@/components/organism/GenericSection/GenericSection";
+import { HeroSection } from "@/components/organism/HeroSection/HeroSection";
+import { OurValuesSection } from "@/components/organism/OurValuesSection/OurValuesSection";
+import { ImageData } from "@/model/imageData";
 
-const VISION_TEXT: string[] = [
+const OUR_VISION_TITLE_TEXT: string = "Viziunea Noastră";
+const OUR_VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
       Viziunea noastră extinde educația dincolo de școli și universități, cultivând curiozitatea, gândirea 
       critică și promovând învățarea continuă pe tot parcursul vieții.`,
@@ -24,23 +20,27 @@ const VISION_TEXT: string[] = [
   `Ne angajăm să fim un factor de schimbare pozitivă în educație. Alătură-te nouă în această călătorie și să fim împreună forța 
       care schimbă viitorul educației în România!`,
 ];
-const VISION_IMAGE: string = `/images/about/Our-Vision-Image.jpg`;
-const VISION_TITLE_TEXT: string = `Viziunea Noastră`;
+const OUR_VISION_IMAGE: ImageData = {
+  src: `/images/about/Our-Vision-Image.jpg`,
+  alt: "svs-our-vision-image",
+};
+
+const HERO_SECTION_TITLE: string = "Despre Noi";
+const HERO_SECTION_IMAGE: ImageData = {
+  src: `/images/about/Our-Vision-Image.jpg`,
+  alt: "svs-hero-section-background-image",
+};
 const HomePage: React.FC = () => {
   return (
-    // <Stack sx={{ flex: 1, minWidth: '100vh' }}>
-    <>
-      <HeroSection title={'Despre Noi'} image_url={shrek} />
+    <Stack>
+      <HeroSection title={HERO_SECTION_TITLE} backgroundImage={HERO_SECTION_IMAGE} />
       <GenericSection
-        title={VISION_TITLE_TEXT}
-        description={VISION_TEXT}
-        image={VISION_IMAGE}
-        altImage="SvS-Vision-Image"
+        title={OUR_VISION_TITLE_TEXT}
+        description={OUR_VISION_TEXT}
+        image={OUR_VISION_IMAGE}
       />
-      <OurValuesSection
-        title={'Valorile Noastre'}
-      />
-    </>
+      <OurValuesSection title={"Valorile Noastre"} />
+    </Stack>
   );
 };
 
