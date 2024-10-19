@@ -7,8 +7,8 @@ import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
 import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
 import { Section } from '@/components/atomic/Section/Section';
 import { SectionVariants } from '@/components/atomic/Section/types';
-import TeamSection from '../../components/organism/TeamSection/team-section';
-import { EventCard } from '@/components/organism/EventCard/EventCard';
+import TeamSection from '../team-section';
+import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
 
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
