@@ -1,146 +1,178 @@
-import React from "react";
-import {
-  AppBar,
-  Typography,
-  Stack,
-  IconButton,
-  Button,
-} from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "@/components/svsLogo.png";
+'use client';
+import React from 'react';
+import { Typography, Stack, IconButton, Box } from '@mui/material';
+import Link from 'next/link';
+import NextLink from 'next/link';
+import Image from 'next/image';
+import { Link as MuiLink } from '@mui/material';
+import Logo from '@/components/svsLogo.png';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+import { useTheme } from '@mui/material/styles';
+
+enum LinkPaths {
+  Home = '/',
+  Projects = '/projects',
+  AboutUs = '/about',
+  RedirectTax = '/redirect-tax',
+  Statut = 'https://drive.google.com/file/d/1Wx4yRM_A6Izm5tntvfalwEMRjL1nmPmr/view',
+  JoinUs = '/join',
+}
+
+interface LinkCompProps {
+  text: string;
+  href: LinkPaths;
+}
+
+export const LinkComp: React.FC<LinkCompProps> = ({ text, href }) => {
+  return (
+    <NextLink href={href} passHref>
+      <MuiLink>{text}</MuiLink>
+    </NextLink>
+  );
+};
+
+const Linkuri: React.FC = () => {
+  const theme = useTheme();
+  return (
+    <Stack direction="column" justifyContent="space-between" paddingLeft="160px">
+      <Typography
+        variant="body1"
+        sx={{ alignContent: 'center', paddingBottom: '14px', paddingRight: '47px' }}
+      >
+        Linkuri
+      </Typography>
+      <Typography variant="body2">
+        <LinkComp text="Proiecte" href={LinkPaths.Projects} />
+      </Typography>
+      <Typography variant="body2">
+        <LinkComp text="Despre noi" href={LinkPaths.AboutUs} />
+      </Typography>
+      <Typography variant="body2">
+        <LinkComp text="Redirectioneaza 3.5%" href={LinkPaths.RedirectTax} />
+      </Typography>
+    </Stack>
+  );
+};
+const Contacteaza: React.FC = () => {
+  const theme = useTheme();
+  return (
+    <Stack direction="column">
+      <Typography
+        variant="body1"
+        sx={{ alignContent: 'center', paddingBottom: '14px', paddingRight: '47px' }}
+      >
+        Contacteaza-ne
+      </Typography>
+      <Typography variant="body2">contact@svs.ong</Typography>
+    </Stack>
+  );
+};
+
+const Resurse: React.FC = () => {
+  const theme = useTheme();
+  return (
+    <Stack direction="column">
+      <Typography variant="body1" sx={{ alignContent: 'center', paddingBottom: '14px' }}>
+        Resurse
+      </Typography>
+      <Typography variant="body2">
+        <LinkComp text="Statut" href={LinkPaths.Statut} />
+      </Typography>
+      <Typography variant="body2">
+        <LinkComp text="Intra in echipa noastra" href={LinkPaths.JoinUs} />
+      </Typography>
+    </Stack>
+  );
+};
+
+const Icons: React.FC = () => {
+  const theme = useTheme();
+  return (
+    <Stack paddingRight="160px" direction="row" alignContent="right">
+      <Link href="https://www.instagram.com/studentipentruviitoristudenti/">
+        <IconButton
+          color="info"
+          sx={{
+            padding: '20',
+            height: 'auto',
+            width: 'auto',
+          }}
+        >
+          <InstagramIcon />
+        </IconButton>
+      </Link>
+
+      <Link href="https://www.facebook.com/studenti.pentru.viitori.studenti">
+        <IconButton
+          color="info"
+          sx={{
+            padding: '20',
+            height: 'auto',
+            width: 'auto',
+          }}
+        >
+          <FacebookIcon />
+        </IconButton>
+      </Link>
+
+      <Link href="https://www.youtube.com/@SVS-ONG">
+        <IconButton
+          color="info"
+          sx={{
+            padding: '20',
+            height: 'auto',
+            width: 'auto',
+          }}
+        >
+          <YouTubeIcon />
+        </IconButton>
+      </Link>
+
+      <Link href="https://www.linkedin.com/company/asociatia-svs/">
+        <IconButton
+          color="info"
+          sx={{
+            padding: '20',
+            height: 'auto',
+            width: 'auto',
+          }}
+        >
+          <LinkedInIcon />
+        </IconButton>
+      </Link>
+    </Stack>
+  );
+};
 
 const Footer: React.FC = () => {
-    const theme = useTheme();
-    return (
-        <AppBar color="primary"
-        sx={{
-          height: "200px",
-          margin: "0",
-          bottom: "0",
-          padding: " 0 178px",
-        }}>
+  const theme = useTheme();
+  return (
+    <Box
+      sx={{
+        height: '200px',
+        margin: '0',
+        bottom: '0',
+        padding: ' 0 178px',
+        backgroundColor: theme.palette.primary.main,
+      }}
+    >
+      <Stack direction="row" paddingTop="20px">
+        <Linkuri />
 
-        <Stack
-          direction="column"
-          justifyContent="space-between"
-          paddingLeft="160px"
-        >
-          <Typography variant="body1" sx={{ alignContent: "center", paddingBottom: "14px", paddingRight: "47px" }}>Linkuri</Typography>
-          <Link href={"/proiecte"}>
-          <Typography variant="body2">Proiecte</Typography>
-          </Link>
-          <Link href={"/about_us"}>
-          <Typography variant="body2">Despre noi</Typography>
-          </Link>
-          <Link href={"/redirect"}>
-          <Typography variant="body2">Redirectionaza 3.5%</Typography>
-          </Link>
-        </Stack>
+        <Contacteaza />
 
-        <Stack
-        direction="column"
-        justifyContent="space-between"
-        >
-          <Typography variant="body1" sx={{ alignContent: "center", paddingBottom: "14px", paddingRight: "47px" }}>CONTACTREAZA_NE</Typography>
-          <Typography variant="body2">contatc@svs.ong</Typography>
-        </Stack>
+        <Resurse />
 
-        <Stack
-        direction="column"
-        justifyContent="space-between"
-        >
-        <Typography variant="body1" sx={{ alignContent: "center", paddingBottom: "14px" }}>Resurse</Typography>
-          <Link href={"/statut"}>
-          <Typography variant="body2">Statut</Typography>
-          </Link>
-          <Link href={"/join_us"}>
-          <Typography variant="body2">Intra in echipa nostra</Typography>
-          </Link>
-        </Stack>
+        <Box sx={{ flexGrow: 1 }} />
 
-
-        <Stack
-        paddingRight="160px"
-        direction="row"
-        justifyContent="space-between"
-        >
-          <Link href="https://www.instagram.com/studentipentruviitoristudenti/">
-        <IconButton color="primary" sx={{
-                padding: "0",
-                height: "auto",
-                width: "auto",
-              }}>
-              <Image
-                src={InstagramIcon}
-                alt={""}
-                height={20}
-                width={20}
-
-              >
-              </Image>
-              </IconButton>
-              </Link>
-
-              <Link href="https://www.facebook.com/studenti.pentru.viitori.studenti">
-        <IconButton color="primary" sx={{
-                padding: "0",
-                height: "auto",
-                width: "auto",
-              }}>
-              <Image
-                src={FacebookIcon}
-                alt={""}
-                height={20}
-                width={20}
-
-              >
-              </Image>
-              </IconButton>
-              </Link>
-
-              <Link href="https://www.youtube.com/@SVS-ONG">
-        <IconButton color="primary" sx={{
-                padding: "0",
-                height: "auto",
-                width: "auto",
-              }}>
-              <Image
-                src={YoutubeIcon}
-                alt={""}
-                height={20}
-                width={20}
-
-              >
-              </Image>
-              </IconButton>
-              </Link>
-
-              <Link href="https://www.linkedin.com/company/asociatia-svs/">
-        <IconButton color="primary" sx={{
-                padding: "0",
-                height: "auto",
-                width: "auto",
-              }}>
-              <Image
-                src={LinkedInIcon}
-                alt={""}
-                height={20}
-                width={20}
-
-              >
-              </Image>
-              </IconButton>
-              </Link>
-        </Stack>
-      </AppBar>
-    )
-}
+        <Icons alignContent="right" />
+      </Stack>
+    </Box>
+  );
+};
 
 export default Footer;
