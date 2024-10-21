@@ -17,7 +17,6 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <NavBar />
-
             {children}
             <Footer />
           </ThemeProvider>
