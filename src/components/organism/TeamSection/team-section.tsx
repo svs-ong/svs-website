@@ -41,7 +41,7 @@ const TeamSection: React.FC<data> = ({ description, imageUrl }) => {
           }}
           direction={'row'}
         >
-          {[1, 2, 3, 4,5].map(() => {
+          {[1, 2, 3, 4,5,6].map(() => {
             return (
                 <TeamCard description="Andrei" imageUrl="" />
             );

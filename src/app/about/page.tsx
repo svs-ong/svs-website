@@ -26,9 +26,10 @@ const VISION_TEXT: string[] = [
 ];
 const VISION_IMAGE: string = `/images/about/Our-Vision-Image.jpg`;
 const VISION_TITLE_TEXT: string = `Viziunea Noastră`;
+const OUR_VALUES_TITLE: string='Valorile Noastre';
 const HomePage: React.FC = () => {
   return (
-     <Stack sx={{ flex: 1, minWidth: '100vh' }}>
+     <Stack>
        <HeroSection title={'Despre Noi'} />
        <GenericSection
          title={VISION_TITLE_TEXT}
@@ -37,7 +38,7 @@ const HomePage: React.FC = () => {
          altImage="SvS-Vision-Image"
        />
        <OurValuesSection
-         title={'Valorile Noastre'}
+         title={OUR_VALUES_TITLE}
        />
        <TeamSection description="" imageUrl=''></TeamSection>
      </Stack>
