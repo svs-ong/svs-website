@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Grid2 } from '@mui/material';
-import TeamCard from '@/app/team-component';
+import TeamCard from '@/components/organism/TeamSection/team-component';
 import theme from '@/theme';
 import { Typography, Container, Box, Stack } from '@mui/material';
 import { Section } from '@/components/atomic/Section/Section';
@@ -41,7 +41,7 @@ const TeamSection: React.FC<data> = ({ description, imageUrl }) => {
           }}
           direction={'row'}
         >
-          {[1, 2, 3, 4,5].map(() => {
+          {[1, 2, 3, 4,5,6].map(() => {
             return (
                 <TeamCard description="Andrei" imageUrl="" />
             );
