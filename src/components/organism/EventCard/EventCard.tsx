@@ -25,7 +25,7 @@ export const EventCard: React.FC<EventCardProps> = ({ title, description, image,
           alignItems: "center",
         }}
       >
-        <Box sx={{ width: '500px', height: '150px', backgroundColor: theme.palette.secondary.main }}><Image src={image} alt={altImage}/></Box>
+        <Box sx={{ width: '500px', height: '150px'}}><Image src={image} alt={altImage}/></Box>
         <Stack direction="column" spacing={2}>
           <Typography variant="h5" color="primary" align="left">
             {title}
