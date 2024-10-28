@@ -12,11 +12,18 @@ interface EventCardProps {
   description: string;
   image: string;
   altImage: string;
+  variant: string;
 }
 
-export const EventCard: React.FC<EventCardProps> = ({ title, description, image, altImage }) => {
+export const EventCard: React.FC<EventCardProps> = ({
+  title,
+  description,
+  image,
+  altImage,
+  variant,
+}) => {
   return (
-    <Section variant={SectionVariants.white}>
+    <Section variant={variant as SectionVariants}>
       <Stack
         direction="row"
         spacing={2}
@@ -25,9 +32,11 @@ export const EventCard: React.FC<EventCardProps> = ({ title, description, image,
           alignItems: "center",
         }}
       >
-        <Box sx={{ width: '500px', height: '150px'}}><Image src={image} alt={altImage}/></Box>
+        <Box sx={{ width: "500px", height: "150px" }}>
+          <Image src={image} alt={altImage} />
+        </Box>
         <Stack direction="column" spacing={2}>
-          <Typography variant="h5" color="primary" align="left">
+          <Typography variant="h5" color="primary.black" align="left">
             {title}
           </Typography>
           <Typography>{description}</Typography>
