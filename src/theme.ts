@@ -1,9 +1,6 @@
 "use client";
 import { Montserrat, Roboto } from "next/font/google";
 import { createTheme } from "@mui/material/styles";
-import { colors } from "@mui/material";
-import { common } from "@mui/material/colors";
-import { info } from "console";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
