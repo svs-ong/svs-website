@@ -1,60 +1,20 @@
 'use client';
 import React from 'react';
-import { AppBar, Typography, useScrollTrigger, Stack, IconButton, Button } from '@mui/material';
+import { AppBar, Typography, Stack, IconButton, Button, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/components/svsLogo.png';
-
-interface Props {
-  window?: () => Window;
-  children?: React.ReactElement<any>;
-}
-
-enum RoutePaths {
-  Home = '/',
-  Projects = '/projects',
-  AboutUs = '/about',
-  RedirectTax = '/redirect-tax',
-  JoinUs = '/join',
-}
-
-interface NavItem {
-  label: string;
-  href: RoutePaths;
-  variant: 'text' | 'outlined';
-}
-
-const navConfig: NavItem[] = [
-  { label: 'Acasa', href: RoutePaths.Home, variant: 'text' },
-  { label: 'Proiecte', href: RoutePaths.Projects, variant: 'text' },
-  { label: 'Despre noi', href: RoutePaths.AboutUs, variant: 'text' },
-  { label: 'Redirectioneaza 3.5%', href: RoutePaths.RedirectTax, variant: 'text' },
-  { label: 'Join Us', href: RoutePaths.JoinUs, variant: 'outlined' },
-];
-
-function ElevationScroll(props: Props) {
-  const { children, window } = props;
-
-  const theme = useTheme();
-
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-    target: window ? window() : undefined,
-  });
-
-  return React.cloneElement(children!, {
-    elevation: trigger ? 4 : 0,
-    style: {
-      backgroundColor: trigger ? theme.palette.common.black : theme.palette.primary.main,
-      transition: 'background-color 0.3s ease',
-    },
-  });
-}
+import ElevationScroll from './NavBarComponents/ElevationScroll';
+import NavConfig from '@/components/organism/NavBar/NavBarComponents/NavConfig';
+import NavDrawer from './NavBarComponents/Drawer';
 
 const NavBar: React.FC = () => {
   const theme = useTheme();
+
+  const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <ElevationScroll>
       <AppBar
@@ -62,18 +22,13 @@ const NavBar: React.FC = () => {
         sx={{
           height: '64px',
           margin: '0',
-          padding: ' 0 40px',
+          padding: '0 40px',
           justifyItems: 'center',
         }}
       >
         <Stack direction="row" alignItems={'center'} height="64px" justifyContent={'space-between'}>
-          <Stack
-            alignContent="center"
-            alignItems="center"
-            direction={'row'}
-            justifyContent={'space-between'}
-            spacing={3}
-          >
+          <Stack direction={'row'} alignItems="center" spacing={3}>
+            {isMobile && <NavDrawer />}
             <Link href="/" passHref style={{ alignContent: 'center' }}>
               <IconButton
                 color="primary"
@@ -90,20 +45,30 @@ const NavBar: React.FC = () => {
               Studenti Pentru Viitori Studenti
             </Typography>
           </Stack>
-          <Stack
-            alignContent="center"
-            direction={'row'}
-            justifyContent={'space-between'}
-            spacing={3}
-          >
-            {navConfig.map((item) => (
-              <Link key={item.href} href={item.href} passHref>
-                <Button variant={item.variant} sx={{ color: 'white', textTransform: 'none' }}>
-                  {item.label}
-                </Button>
-              </Link>
-            ))}
-          </Stack>
+          {!isMobile && (
+            <Stack
+              alignContent="center"
+              direction={'row'}
+              justifyContent={'space-between'}
+              spacing={3}
+            >
+              {NavConfig.map((item) => (
+                <Link key={item.href} href={item.href} passHref>
+                  <Button
+                    variant={item.variant}
+                    sx={{
+                      color: 'white',
+                      textTransform: 'none',
+                      fontSize: isTablet ? '14px' : 'inherit',
+                      height: isTablet ? '42px' : 'inherit',
+                    }}
+                  >
+                    {item.label}
+                  </Button>
+                </Link>
+              ))}
+            </Stack>
+          )}
         </Stack>
       </AppBar>
     </ElevationScroll>
