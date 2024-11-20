@@ -26,59 +26,51 @@ const colorPalette = {
     dark: "#f56100",
   },
   common: {
-    white : "#ffffff",
-    black : "#000000",
+    white: "#ffffff",
+    black: "#000000",
   },
-  grey:{
-    300 : "#ebebeb",
-    900 : "#212121",
+  grey: {
+    300: "#ebebeb",
+    900: "#212121",
   },
-  info:{
-    main : "#e9f9ff",
+  info: {
+    main: "#e9f9ff",
   },
-}
-const typography =
-{
-  h3:
-  {
-    fontSize : 49,
+};
+const typography = {
+  h3: {
+    fontSize: 49,
     fontWeight: 500,
-    fontFamily: roboto.style.fontFamily
+    fontFamily: roboto.style.fontFamily,
   },
-  h4:
-  {
-    fontSize : 35,
+  h4: {
+    fontSize: 35,
     fontWeight: 500,
-    fontFamily: roboto.style.fontFamily
+    fontFamily: roboto.style.fontFamily,
   },
-  h5:
-  {
-    fontSize : 24,
+  h5: {
+    fontSize: 24,
     fontWeight: 500,
-    fontFamily: roboto.style.fontFamily
+    fontFamily: roboto.style.fontFamily,
   },
-  body1:
-  {
-    fontSize : 16,
-    fontFamily: roboto.style.fontFamily
-  }
-}
+  body1: {
+    fontSize: 16,
+    fontFamily: roboto.style.fontFamily,
+  },
+};
 const theme = createTheme({
-
   palette: colorPalette,
   typography: typography,
   components: {
-
-    MuiIconButton:{
-      defaultProps  :{
-        disableRipple:true,
+    MuiIconButton: {
+      defaultProps: {
+        disableRipple: true,
       },
     },
 
     MuiButton: {
-
-      defaultProps  :{
-        disableRipple:true,
+      defaultProps: {
+        disableRipple: true,
       },
 
       styleOverrides: {
@@ -87,10 +79,10 @@ const theme = createTheme({
           height: "40px",
         },
 
-        text: {  
+        text: {
           color: colorPalette.common.white,
           fontSize: "16px",
-          '&:hover': {
+          "&:hover": {
             color: colorPalette.secondary.dark,
             backgroundColor: "transparent",
           },
@@ -100,8 +92,7 @@ const theme = createTheme({
           borderColor: colorPalette.common.white,
           color: colorPalette.common.white,
           fontSize: "16px",
-          '&:hover': {
-            // backgroundColor: colorPalette.secondary.dark,
+          "&:hover": {
             color: colorPalette.secondary.dark,
             borderColor: colorPalette.secondary.dark,
           },
@@ -111,33 +102,30 @@ const theme = createTheme({
           backgroundColor: colorPalette.primary.main,
           color: colorPalette.common.white,
           fontSize: "16px",
-          '&:hover': {
+          "&:hover": {
             backgroundColor: colorPalette.secondary.dark,
           },
         },
-
       },
     },
 
-  MuiLink: {
-  styleOverrides: {
-    root: {
-      color: colorPalette.common.white,
-      underline: "none",
-      alignContent: "center",
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: colorPalette.common.white,
+          underline: "hover",
+          alignContent: "center",
+        },
+      },
+    },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          padding: "50px 0px",
+        },
+      },
     },
   },
-},
-  MuiContainer: {
-    styleOverrides: {
-      root: {
-        padding : "50px 0px" ,
-      },
-    }
-  },
-},
 });
-
-
 
 export default theme;

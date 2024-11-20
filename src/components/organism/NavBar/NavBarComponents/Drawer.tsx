@@ -1,10 +1,10 @@
-'use client';
-import React, { useState } from 'react';
-import { Stack, Button, Drawer, Box, Divider, useTheme, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import Link from 'next/link';
-import DrawerHeader from '@/components/organism/NavBar/NavBarComponents/DrawerHeader';
-import NavConfig from '@/components/organism/NavBar/NavBarComponents/NavConfig';
+"use client";
+import React, { useState } from "react";
+import { Stack, Button, Drawer, Box, Divider, useTheme, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import Link from "next/link";
+import DrawerHeader from "@/components/organism/NavBar/NavBarComponents/DrawerHeader";
+import NavConfig from "@/components/organism/NavBar/NavBarComponents/NavConfig";
 
 const NavDrawer: React.FC<any> = () => {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
@@ -21,26 +21,29 @@ const NavDrawer: React.FC<any> = () => {
 
       <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerToggle}>
         <DrawerHeader handleDrawerClose={handleDrawerToggle} />
-        <Divider sx={{ color: 'white' }} variant="fullWidth" textAlign="center" />
+        <Divider sx={{ color: "white" }} variant="fullWidth" textAlign="center" />
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-start',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
             backgroundColor: theme.palette.primary.main,
-            height: '100%',
+            height: "100%",
           }}
         >
           <Stack
             alignContent="center"
-            direction={'column'}
-            justifyContent={'flex-start'}
+            direction={"column"}
+            justifyContent={"flex-start"}
             spacing={3}
-            sx={{ paddingTop: '25px', flexGrow: 1 }}
+            sx={{ flexGrow: 1, p: "20px 15px" }}
           >
             {NavConfig.map((item) => (
               <Link key={item.href} href={item.href} passHref>
-                <Button variant="text" sx={{ color: 'white', textTransform: 'none' }}>
+                <Button
+                  variant="text"
+                  sx={{ color: "white", textTransform: "none", alignItems: "center" }}
+                >
                   {item.label}
                 </Button>
               </Link>
