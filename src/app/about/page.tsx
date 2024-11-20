@@ -1,13 +1,10 @@
 import React from "react";
-import { Button, Container, Stack, Typography } from "@mui/material";
-import { Roboto } from "next/font/google";
-import { Box } from "@mui/material";
 import { GenericSection } from "@/components/organism/GenericSection/GenericSection";
 import { HeroSection } from "@/components/organism/HeroSection/HeroSection";
 import { OurValuesSection } from "@/components/organism/OurValuesSection/OurValuesSection";
-import { Section } from "@/components/atomic/Section/Section";
-import { SectionVariants } from "@/components/atomic/Section/types";
 import TeamSection from "@/components/organism/TeamSection/team-section";
+import Footer from "@/components/organism/Footer/footer";
+import { Stack } from "@mui/material";
 
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
@@ -38,6 +35,7 @@ const HomePage: React.FC = () => {
       />
       <OurValuesSection title={OUR_VALUES_TITLE} />
       <TeamSection description="" imageUrl=""></TeamSection>
+      <Footer/>
     </Stack>
   );
 };
