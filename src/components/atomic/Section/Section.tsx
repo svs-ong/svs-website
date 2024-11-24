@@ -22,7 +22,7 @@ export const Section: React.FC<SectionProps> = ({ variant, children }) => {
   };
 
   return (
-    <Box sx={{ flexgrow: 1, backgroundColor: getBackgroundColor() }}>
+    <Box sx={{ flexgrow: 1, backgroundColor: getBackgroundColor(), padding: '20px'}}>
       <Container sx={{ display: 'flex', alignContent: 'center', justifyContent: 'center' }}>
         {children}
       </Container>

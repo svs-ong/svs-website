@@ -24,7 +24,7 @@ export const GenericSection: React.FC<GenericSectionProps> = ({
 }) => {
   return (
     <Section variant={SectionVariants.white}>
-      <Stack direction="row" spacing={2} gap="20px">
+      <Stack direction={{ sm: 'column', md: 'row' }} spacing={2} gap="20px">
         <Image src={image} alt={altImage} />
         <Stack direction="column" spacing={2}>
           <Typography variant="h4" color="primary" align="left">
