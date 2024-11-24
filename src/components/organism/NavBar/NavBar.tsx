@@ -10,7 +10,7 @@ import NavDrawer from "./NavBarComponents/Drawer";
 
 const NavBar: React.FC = () => {
   const theme = useTheme();
-
+  
   const isTablet = useMediaQuery(theme.breakpoints.down("lg"));
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const isTabletOrNormal = (isTablet && !isMobile) || (!isMobile && !isTablet);
