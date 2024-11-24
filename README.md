@@ -1,6 +1,6 @@
 # svs-website
 
-This is a repository for the interns from the summer internship 2024. It will replicate the existing SVS website and then some developments will be made.
+This is a repository for the interns from SVS. It will replicate the existing SVS website and then some developments will be made to it.
 
 ## Install Prettier & ESLint
 
@@ -19,3 +19,9 @@ To maintain code quality and consistency, we use Prettier and ESLint. Watch this
 ```bash
     npm run dev
 ```
+
+## Design
+
+The design that shall be followed in making of the site is made in Figma and is:
+
+- [Figma Link](https://www.figma.com/files/team/1410619865443270235/all-projects?fuid=1350196800699510089)
