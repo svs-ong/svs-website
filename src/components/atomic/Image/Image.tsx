@@ -9,10 +9,10 @@ interface ImageProps {
 
 export const Image : React.FC<ImageProps> = ({src , alt}) =>{
     return (
-        <Box sx={{position: "relative", width: "100%"}}>
+        <Box sx={{ position: "relative", width: "100%", height: { xs: "250px", sm: "350px", md: "450px" } }}>
             <NextImage
-                src={src} 
-                alt = {alt}
+                src={src}
+                alt={alt}
                 layout="fill"
                 objectFit="cover"
             />
