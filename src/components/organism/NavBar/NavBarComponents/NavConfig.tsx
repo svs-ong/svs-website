@@ -3,7 +3,7 @@ import React from 'react';
 
 enum RoutePaths {
   Home = '/',
-  Projects = '/projects',
+  Projects = '/events',
   AboutUs = '/about',
   RedirectTax = '/redirect-tax',
   JoinUs = '/join',

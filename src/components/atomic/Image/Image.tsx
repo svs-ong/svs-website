@@ -5,12 +5,20 @@ import NextImage, { StaticImageData } from "next/image";
 interface ImageProps {
   src: string | StaticImageData;
   alt: string;
+  height?: number;
+  width?: number;
 }
 
-export const Image: React.FC<ImageProps> = ({ src, alt }) => {
+export const Image: React.FC<ImageProps> = ({ src, alt, height, width }) => {
   return (
     <Box sx={{ position: "relative", width: "100%" }}>
-      <NextImage src={src} alt={alt} layout="fill" objectFit="cover" />
+      <NextImage
+        height={height}
+        width={width}
+        src={src}
+        alt={alt}
+        objectFit="cover"
+      />
     </Box>
   );
 };

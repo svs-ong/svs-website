@@ -1,8 +1,17 @@
 "use client";
 import React from "react";
-import { AppBar, Typography, Stack, IconButton, Button, useMediaQuery, Link } from "@mui/material";
+import {
+  AppBar,
+  Typography,
+  Stack,
+  IconButton,
+  Button,
+  useMediaQuery,
+  Link,
+  Box,
+} from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import Image from "next/image";
+import { Image } from "@/components/atomic/Image/Image";
 import Logo from "@/components/svsLogo.png";
 import ElevationScroll from "./NavBarComponents/ElevationScroll";
 import NavConfig from "@/components/organism/NavBar/NavBarComponents/NavConfig";
@@ -10,7 +19,7 @@ import NavDrawer from "./NavBarComponents/Drawer";
 
 const NavBar: React.FC = () => {
   const theme = useTheme();
-  
+
   const isTablet = useMediaQuery(theme.breakpoints.down("lg"));
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const isTabletOrNormal = (isTablet && !isMobile) || (!isMobile && !isTablet);
@@ -38,7 +47,7 @@ const NavBar: React.FC = () => {
                     width: "auto",
                   }}
                 >
-                  <Image priority src={Logo} alt={""} height={60} width={60}></Image>
+                  <Image width={60} height={60} src={Logo} alt={""}></Image>
                 </IconButton>
               </Link>
             </>

@@ -5,7 +5,7 @@ import { OurValuesSection } from "@/components/organism/OurValuesSection/OurValu
 import TeamSection from "@/components/organism/TeamSection/team-section";
 import Footer from "@/components/organism/Footer/footer";
 import { Stack } from "@mui/material";
-
+import VisionImage from "../../../public/images/about/Our-Vision-Image.jpg";
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
       Viziunea noastră extinde educația dincolo de școli și universități, cultivând curiozitatea, gândirea 
@@ -20,7 +20,7 @@ const VISION_TEXT: string[] = [
   `Ne angajăm să fim un factor de schimbare pozitivă în educație. Alătură-te nouă în această călătorie și să fim împreună forța 
       care schimbă viitorul educației în România!`,
 ];
-const VISION_IMAGE: string = `/images/about/Our-Vision-Image.jpg`;
+
 const VISION_TITLE_TEXT: string = `Viziunea Noastră`;
 const OUR_VALUES_TITLE: string = "Valorile Noastre";
 const HomePage: React.FC = () => {
@@ -30,12 +30,12 @@ const HomePage: React.FC = () => {
       <GenericSection
         title={VISION_TITLE_TEXT}
         description={VISION_TEXT}
-        image={VISION_IMAGE}
+        image={VisionImage}
         altImage="SvS-Vision-Image"
       />
       <OurValuesSection title={OUR_VALUES_TITLE} />
       <TeamSection description="" imageUrl=""></TeamSection>
-      <Footer/>
+      <Footer />
     </Stack>
   );
 };
