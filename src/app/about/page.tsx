@@ -1,15 +1,11 @@
-import React from 'react';
-import { Button, Container, Stack, Typography } from '@mui/material';
-import { Roboto } from 'next/font/google';
-import { Box } from '@mui/material';
-import { GenericSection } from '@/components/organism/GenericSection/GenericSection';
-import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
-import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
-import { Section } from '@/components/atomic/Section/Section';
-import { SectionVariants } from '@/components/atomic/Section/types';
-import TeamSection from '@/components/organism/TeamSection/team-section';
-
-
+import React from "react";
+import { GenericSection } from "@/components/organism/GenericSection/GenericSection";
+import { HeroSection } from "@/components/organism/HeroSection/HeroSection";
+import { OurValuesSection } from "@/components/organism/OurValuesSection/OurValuesSection";
+import TeamSection from "@/components/organism/TeamSection/team-section";
+import Footer from "@/components/organism/Footer/footer";
+import { Stack } from "@mui/material";
+import VisionImage from "../../../public/images/about/Our-Vision-Image.jpg";
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
       Viziunea noastră extinde educația dincolo de școli și universități, cultivând curiozitatea, gândirea 
@@ -24,24 +20,23 @@ const VISION_TEXT: string[] = [
   `Ne angajăm să fim un factor de schimbare pozitivă în educație. Alătură-te nouă în această călătorie și să fim împreună forța 
       care schimbă viitorul educației în România!`,
 ];
-const VISION_IMAGE: string = `/images/about/Our-Vision-Image.jpg`;
+
 const VISION_TITLE_TEXT: string = `Viziunea Noastră`;
-const OUR_VALUES_TITLE: string='Valorile Noastre';
+const OUR_VALUES_TITLE: string = "Valorile Noastre";
 const HomePage: React.FC = () => {
   return (
-     <Stack>
-       <HeroSection title={'Despre Noi'} />
-       <GenericSection
-         title={VISION_TITLE_TEXT}
-         description={VISION_TEXT}
-         image={VISION_IMAGE}
-         altImage="SvS-Vision-Image"
-       />
-       <OurValuesSection
-         title={OUR_VALUES_TITLE}
-       />
-       <TeamSection description="" imageUrl=''></TeamSection>
-     </Stack>
+    <Stack>
+      <HeroSection title={"Despre Noi"} />
+      <GenericSection
+        title={VISION_TITLE_TEXT}
+        description={VISION_TEXT}
+        image={VisionImage}
+        altImage="SvS-Vision-Image"
+      />
+      <OurValuesSection title={OUR_VALUES_TITLE} />
+      <TeamSection description="" imageUrl=""></TeamSection>
+      <Footer />
+    </Stack>
   );
 };
 

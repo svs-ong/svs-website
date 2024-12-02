@@ -13,8 +13,8 @@ const DrawerHeader: React.FC<DrawerHeaderProps> = ({ handleDrawerClose }) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
-        padding: (theme) => theme.spacing(1),
+        justifyContent: 'space-between',
+        padding : "20px",
         backgroundColor: (theme) => theme.palette.primary.main,
       }}
     >

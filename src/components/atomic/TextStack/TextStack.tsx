@@ -1,11 +1,11 @@
-import { Stack, StackProps, TypographyProps } from '@mui/material';
-import { Typography } from '@mui/material';
+import { Stack, StackProps, TypographyProps } from "@mui/material";
+import { Typography } from "@mui/material";
 
 interface TextStackProps {
   paragraphs: string[];
-  variant?: TypographyProps['variant'];
-  color?: TypographyProps['color'];
-  gap?: StackProps['spacing'];
+  variant?: TypographyProps["variant"];
+  color?: TypographyProps["color"];
+  gap?: StackProps["spacing"];
 }
 
 export const TextStack: React.FC<TextStackProps> = ({ paragraphs, variant, color, gap }) => {

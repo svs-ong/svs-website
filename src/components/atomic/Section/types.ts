@@ -1,4 +1,4 @@
 export enum SectionVariants {
-    white = 'white',
-    primary = 'primary',
-  }
+  white = "white",
+  primary = "primary",
+}
