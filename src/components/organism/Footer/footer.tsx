@@ -22,9 +22,9 @@ const Footer: React.FC = () => {
         }}
       >
         <Stack
-          direction="row"
+          direction={{ xs: "column", sm: "row" }}
           paddingTop="20px"
-          justifyContent={"space-between"}
+          justifyContent={{ xs: "center", sm: "space-between" }}
           alignItems={"start"}
         >
           <Linkuri />

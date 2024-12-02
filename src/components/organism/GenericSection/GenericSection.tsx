@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, useTheme } from "@mui/material";
 import { TextStack } from "@/components/atomic/TextStack/TextStack";
 import { Image } from "@/components/atomic/Image/Image";
 import { Section } from "@/components/atomic/Section/Section";
@@ -19,10 +20,21 @@ export const GenericSection: React.FC<GenericSectionProps> = ({
   image,
   altImage,
 }) => {
+  const theme = useTheme();
+
   return (
     <Section variant={SectionVariants.white}>
-      <Stack direction="row" spacing={2} gap="20px">
-        <Image src={image} alt={altImage} width={418} height={396} />
+      <Stack direction={{ xs: "column", md: "row" }} spacing={2} gap="20px">
+        <Image
+          src={image}
+          alt={altImage}
+          width={418}
+          height={{
+            xs: 250,
+            sm: 350,
+            md: 396,
+          }}
+        />
         <Stack direction="column" spacing={2}>
           <Typography variant="h4" color="primary" align="left">
             {title}
