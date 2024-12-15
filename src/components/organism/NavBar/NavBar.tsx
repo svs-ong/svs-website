@@ -47,7 +47,12 @@ const NavBar: React.FC = () => {
                     width: "auto",
                   }}
                 >
-                  <Image width={60} height={60} src={Logo} alt={""}></Image>
+                  <Image
+                    width={{ xs: 60, sm: 60, md: 60 }}
+                    height={{ xs: 60, sm: 60, md: 60 }}
+                    src={Logo}
+                    alt={""}
+                  ></Image>
                 </IconButton>
               </Link>
             </>

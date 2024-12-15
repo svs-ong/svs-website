@@ -41,7 +41,7 @@ const TeamSection: React.FC<data> = ({ description, imageUrl }) => {
         >
           {[1, 2, 3, 4, 5, 6].map((_, index) => {
             return (
-              <Grid2>
+              <Grid2 key={index}>
                 <TeamCard key={index} description="Andrei" imageUrl="" />
               </Grid2>
             );
