@@ -13,27 +13,25 @@ const Footer: React.FC = () => {
   const theme = useTheme();
   return (
     <Section variant={SectionVariants.primary}>
-      <Box
+      <Stack
+        direction={{ xs: "column", md: "row" }}
+        spacing={2}
         sx={{
-          height: "200px",
-          margin: "0",
-          bottom: "0",
-          backgroundColor: theme.palette.primary.main,
+          justifyContent: "space-between",
         }}
       >
         <Stack
-          direction={{ xs: "column", sm: "row" }}
-          paddingTop="20px"
+          direction={{ xs: "column", md: "row" }}
           justifyContent={{ xs: "center", sm: "space-between" }}
           alignItems={"start"}
+          spacing={4}
         >
           <Linkuri />
           <Contacteaza />
           <Resurse />
-          <Box sx={{ flexGrow: 1, alignContent: "start" }} />
-          <Icons />
         </Stack>
-      </Box>
+        <Icons />
+      </Stack>
     </Section>
   );
 };

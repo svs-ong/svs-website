@@ -11,12 +11,18 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const Icons: React.FC = () => {
   const theme = useTheme();
   return (
-    <Stack direction="row" alignContent="right">
+    <Stack
+      direction="row"
+      spacing={1}
+      sx={{
+        justifyContent: "flex-end",
+        alignItems: "flex-start",
+      }}
+    >
       <Link href="https://www.instagram.com/studentipentruviitoristudenti/">
         <IconButton
           color="info"
           sx={{
-            padding: "20",
             height: "auto",
             width: "auto",
           }}
@@ -29,7 +35,6 @@ const Icons: React.FC = () => {
         <IconButton
           color="info"
           sx={{
-            padding: "20",
             height: "auto",
             width: "auto",
           }}
@@ -42,7 +47,6 @@ const Icons: React.FC = () => {
         <IconButton
           color="info"
           sx={{
-            padding: "20",
             height: "auto",
             width: "auto",
           }}
@@ -55,7 +59,6 @@ const Icons: React.FC = () => {
         <IconButton
           color="info"
           sx={{
-            padding: "20",
             paddingRight: 0,
             height: "auto",
             width: "auto",
