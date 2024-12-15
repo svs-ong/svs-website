@@ -1,7 +1,7 @@
 import React from "react";
 import { GenericSection } from "@/components/organism/GenericSection/GenericSection";
 import { HeroSection } from "@/components/organism/HeroSection/HeroSection";
-import { OurValuesSection } from "@/components/organism/OurValuesSection/OurValuesSection";
+import { OurValuesSection } from "@/app/about/components/OurValuesSection/OurValuesSection";
 import TeamSection from "@/app/about/components/TeamSection/team-section";
 import Footer from "@/components/organism/Footer/footer";
 import { Stack } from "@mui/material";
