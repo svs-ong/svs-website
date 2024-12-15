@@ -1,11 +1,12 @@
-import React from "react";
-import { GenericSection } from "@/components/organism/GenericSection/GenericSection";
-import { HeroSection } from "@/components/organism/HeroSection/HeroSection";
-import { OurValuesSection } from "@/components/organism/OurValuesSection/OurValuesSection";
-import TeamSection from "@/components/organism/TeamSection/team-section";
-import Footer from "@/components/organism/Footer/footer";
-import { Stack } from "@mui/material";
-import VisionImage from "../../../public/images/about/Our-Vision-Image.jpg";
+import React from 'react';
+import { GenericSection } from '@/components/organism/GenericSection/GenericSection';
+import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
+import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
+import TeamSection from '@/components/organism/TeamSection/team-section';
+import Footer from '@/components/organism/Footer/footer';
+import { Stack } from '@mui/material';
+import VisionImage from '../../../public/images/about/Our-Vision-Image.jpg';
+
 const VISION_TEXT: string[] = [
   `Viziunea Noastră Visăm la o lume în care învățăm împreună, punând un accent deosebit pe educație. 
       Viziunea noastră extinde educația dincolo de școli și universități, cultivând curiozitatea, gândirea 
@@ -22,18 +23,21 @@ const VISION_TEXT: string[] = [
 ];
 
 const VISION_TITLE_TEXT: string = `Viziunea Noastră`;
-const OUR_VALUES_TITLE: string = "Valorile Noastre";
+const OUR_VALUES_TITLE: string = `Valorile Noastre`;
+
 const HomePage: React.FC = () => {
   return (
     <Stack>
-      <HeroSection title={"Despre Noi"} />
+      <HeroSection title={'Despre Noi'} />
       <GenericSection
         title={VISION_TITLE_TEXT}
         description={VISION_TEXT}
         image={VisionImage}
         altImage="SvS-Vision-Image"
       />
-      <OurValuesSection title={OUR_VALUES_TITLE} />
+      <OurValuesSection
+        title={OUR_VALUES_TITLE}
+      />
       <TeamSection description="" imageUrl=""></TeamSection>
       <Footer />
     </Stack>
