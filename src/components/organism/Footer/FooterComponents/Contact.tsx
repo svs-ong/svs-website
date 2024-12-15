@@ -6,13 +6,13 @@ import React from "react";
 const Contacteaza: React.FC = () => {
   const theme = useTheme();
   return (
-    <Stack direction="column" sx={{ ml: 2 }}>
+    <Stack direction="column" justifyContent="space-between">
       <Typography
         variant="body1"
         color="common.white"
         sx={{
           alignContent: "center",
-          paddingBottom: "14px",
+          paddingBottom: "4px",
           paddingRight: "47px",
           fontWeight: "bold",
         }}
