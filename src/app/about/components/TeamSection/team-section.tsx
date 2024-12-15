@@ -3,8 +3,7 @@
 import React from "react";
 import { Grid2 } from "@mui/material";
 import TeamCard from "@/app/about/components/TeamSection/team-component";
-import theme from "@/theme";
-import { Typography, Container, Box, Stack } from "@mui/material";
+import { Typography, Stack } from "@mui/material";
 import { Section } from "@/components/atomic/Section/Section";
 import { SectionVariants } from "@/components/atomic/Section/types";
 
@@ -27,11 +26,12 @@ const mockData = [
 const TeamSection: React.FC<data> = ({ description, imageUrl }) => {
   return (
     <Section variant={SectionVariants.primary}>
-      <Stack gap="100px">
+      <Stack gap="100px" alignItems={"center"}>
         <Typography variant="h3" color="black" align="center" textAlign={"center"}>
           Echipa Noastra
         </Typography>
         <Grid2
+          alignItems={"center"}
           container
           spacing={2}
           sx={{
@@ -41,7 +41,7 @@ const TeamSection: React.FC<data> = ({ description, imageUrl }) => {
         >
           {[1, 2, 3, 4, 5, 6].map((_, index) => {
             return (
-              <Grid2 key={index}>
+              <Grid2 key={index} size={{ xs: 12, md: 4, lg: 3 }}>
                 <TeamCard key={index} description="Andrei" imageUrl="" />
               </Grid2>
             );
