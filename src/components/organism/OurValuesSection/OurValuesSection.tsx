@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
-import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
-import theme from "@/theme";
+'use client';
+import React from 'react';
+import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
+import theme from '@/theme';
 
 interface OurValuesSectionProps {
   title: string;
@@ -19,7 +19,7 @@ export const OurValuesSection: React.FC<OurValuesSectionProps> = ({ title }) => 
           variant="h4"
           color="primary.main"
           align="center"
-          textAlign={"center"}
+          textAlign={'center'}
           paddingBottom="45px"
         >
           {title}
@@ -28,14 +28,15 @@ export const OurValuesSection: React.FC<OurValuesSectionProps> = ({ title }) => 
         <Stack
           direction="row"
           spacing={2} // 160px spacing (20 * 8px) on both sides
-          justifyContent={"space-between"}
+          justifyContent={'space-between'}
         >
-          {[1, 2, 3].map(() => {
+          {[1, 2, 3].map((_, index) => {
             return (
               <Box
+                key={index}
                 sx={{
                   backgroundColor: theme.palette.primary.main,
-                  height: "400px",
+                  height: '400px',
                   flexGrow: 1,
                 }}
               />
