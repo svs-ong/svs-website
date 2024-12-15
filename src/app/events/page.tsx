@@ -2,6 +2,7 @@ import React from "react";
 import { Stack } from "@mui/material";
 import { HeroSection } from "@/components/organism/HeroSection/HeroSection";
 import EventsSection from "@/components/organism/EventCard/EventSection";
+import chill from "@/../public/veryChillGuyWhoDoesntReallyCareAboutMuch.webp"
 const OUR_PROJECTS_TITLE: string = "Proiecte";
 const OUR_PROJECTS_CARD_TITLE: string = "SVS SESSIONS";
 const OUR_PROJECTS_CARD_DESCRIPTION: string =
@@ -15,7 +16,7 @@ const EventsPage: React.FC = () => {
       <HeroSection title={OUR_PROJECTS_TITLE} />
       <EventsSection
         title={OUR_PROJECTS_CARD_TITLE}
-        image={OUR_PROJECTS_CARD_IMAGE}
+        image={chill}
         altImage={OUR_PROJECTS_CARD_IMAGE_ALT}
         description={OUR_PROJECTS_CARD_DESCRIPTION}
       ></EventsSection>

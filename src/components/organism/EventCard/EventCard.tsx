@@ -6,11 +6,13 @@ import { TextStack } from "@/components/atomic/TextStack/TextStack";
 import { Image } from "@/components/atomic/Image/Image";
 import { Box, Stack, Typography } from "@mui/material";
 import theme from "@/theme";
+import { StaticImageData } from "next/image";
+
 
 interface EventCardProps {
   title: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   altImage: string;
   variant: string;
 }
@@ -33,7 +35,7 @@ export const EventCard: React.FC<EventCardProps> = ({
         }}
       >
         <Box sx={{ width: "500px", height: "150px" }}>
-          <Image src={image} alt={altImage} />
+          <Image src={image} alt={altImage} height = {{xs:"150px", md:"150"}} width={{xs:"500", md: "500"}} />
         </Box>
         <Stack direction="column" spacing={2}>
           <Typography variant="h5" color="primary.black" align="left">

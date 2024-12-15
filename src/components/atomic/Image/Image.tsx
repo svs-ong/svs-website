@@ -19,7 +19,7 @@ export const Image: React.FC<ImageProps> = ({ src, alt, height = 'auto', width =
         overflow: 'hidden',
       }}
     >
-      <NextImage src={src} alt={alt} layout="fill" objectFit="cover" />
+      <NextImage src={src} alt={alt} fill style={{ objectFit: 'cover' }} />
     </Box>
   );
 };

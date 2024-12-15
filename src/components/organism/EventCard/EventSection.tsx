@@ -2,11 +2,13 @@ import React from "react";
 import { EventCard } from "./EventCard";
 import { Stack } from "@mui/material";
 import { SectionVariants } from "@/components/atomic/Section/types";
+import { StaticImageData } from "next/image";
+
 
 interface EventSectionProps {
   title: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   altImage: string;
 }
 
