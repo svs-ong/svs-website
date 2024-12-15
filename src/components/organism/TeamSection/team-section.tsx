@@ -3,7 +3,6 @@
 import React from 'react';
 import { Grid2 } from '@mui/material';
 import TeamCard from '@/components/organism/TeamSection/team-component';
-import theme from '@/theme';
 import { Typography, Container, Box, Stack } from '@mui/material';
 import { Section } from '@/components/atomic/Section/Section';
 import { SectionVariants } from '@/components/atomic/Section/types';
@@ -39,7 +38,7 @@ const TeamSection: React.FC<data> = ({ description, imageUrl }) => {
           }}
           direction={'row'}
         >
-          {[1, 2, 3, 4, 5, 6].map((_, index) => {
+          {[1, 2, 3, 4, 5, 6].map((_,index) => {
             return <TeamCard key={index} description="Andrei" imageUrl="" />;
           })}
         </Grid2>
