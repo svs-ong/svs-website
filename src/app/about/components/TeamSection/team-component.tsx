@@ -25,7 +25,7 @@ const TeamCard: React.FC<data> = ({ description, imageUrl }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Stack
-        sx={{ width: 240, height: 300, justifyContent: "center", alignItems: "center" }}
+        sx={{ height: 300, justifyContent: "center", alignItems: "center" }}
         direction={"column"}
         spacing={1}
       >

@@ -2,10 +2,8 @@
 import React from "react";
 import { Section } from "@/components/atomic/Section/Section";
 import { SectionVariants } from "@/components/atomic/Section/types";
-import { TextStack } from "@/components/atomic/TextStack/TextStack";
 import { Image } from "@/components/atomic/Image/Image";
 import { Box, Stack, Typography } from "@mui/material";
-import theme from "@/theme";
 
 interface EventCardProps {
   title: string;
