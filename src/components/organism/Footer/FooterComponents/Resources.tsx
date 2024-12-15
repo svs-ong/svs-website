@@ -16,7 +16,7 @@ const Resurse: React.FC = () => {
       <Typography
         variant="body1"
         color={theme.palette.common.white}
-        sx={{ alignContent: "center", paddingBottom: "14px", fontWeight: "bold" }}
+        sx={{ alignContent: "center", paddingBottom: "4px", fontWeight: "bold" }}
       >
         Resurse
       </Typography>

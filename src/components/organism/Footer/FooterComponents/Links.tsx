@@ -12,7 +12,7 @@ const Linkuri: React.FC = () => {
       <Typography
         variant="body1"
         color="common.white"
-        sx={{ alignContent: "center", paddingBottom: "14px", fontWeight: "bold" }}
+        sx={{ alignContent: "center", paddingBottom: "4px", fontWeight: "bold" }}
       >
         Linkuri
       </Typography>
