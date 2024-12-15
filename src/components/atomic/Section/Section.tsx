@@ -16,6 +16,8 @@ export const Section: React.FC<SectionProps> = ({ variant, children }) => {
         return theme.palette.common.white;
       case SectionVariants.primary:
         return theme.palette.primary.main;
+      case SectionVariants.gray:
+        return theme.palette.grey[300];
       default:
         return theme.palette.primary.main;
     }

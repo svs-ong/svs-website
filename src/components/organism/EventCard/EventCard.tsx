@@ -25,7 +25,7 @@ export const EventCard: React.FC<EventCardProps> = ({
   return (
     <Section variant={variant as SectionVariants}>
       <Stack
-        direction="row"
+        direction={{md:"row", xs:"column"}}
         spacing={2}
         sx={{
           justifyContent: "center",

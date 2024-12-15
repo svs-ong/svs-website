@@ -14,7 +14,7 @@ const EventsSection: React.FC<EventSectionProps> = ({ description, image, altIma
   return (
     <Stack>
       {[1, 2, 3, 4, 5, 6].map((_, index) => {
-        const variant = index % 2 === 0 ? SectionVariants.white : SectionVariants.primary;
+        const variant = index % 2 === 0 ? SectionVariants.white : SectionVariants.gray;
 
         return (
           <EventCard
