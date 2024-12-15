@@ -3,7 +3,6 @@ import { GenericSection } from '@/components/organism/GenericSection/GenericSect
 import { HeroSection } from '@/components/organism/HeroSection/HeroSection';
 import { OurValuesSection } from '@/components/organism/OurValuesSection/OurValuesSection';
 import TeamSection from '@/app/about/components/TeamSection/team-component';
-import Footer from '@/components/organism/Footer/footer';
 import { Stack } from '@mui/material';
 import VisionImage from '../../../public/images/about/Our-Vision-Image.jpg';
 import VText from '@/app/about/VisionText.json';

@@ -5,8 +5,8 @@ import NextImage, { StaticImageData } from 'next/image';
 interface ImageProps {
   src: string | StaticImageData;
   alt: string;
-  height?: any;
-  width?: any;
+  height?: number | string | { [key: string]: number | string };
+  width?: number | string | { [key: string]: number | string };
 }
 
 export const Image: React.FC<ImageProps> = ({ src, alt, height = 'auto', width = '100%' }) => {
