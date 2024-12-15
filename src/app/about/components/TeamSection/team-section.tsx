@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Grid2 } from "@mui/material";
-import TeamCard from "@/components/organism/TeamSection/team-component";
+import TeamCard from "@/app/about/components/TeamSection/team-component";
 import theme from "@/theme";
 import { Typography, Container, Box, Stack } from "@mui/material";
 import { Section } from "@/components/atomic/Section/Section";
