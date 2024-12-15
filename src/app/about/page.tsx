@@ -2,7 +2,7 @@ import React from "react";
 import { GenericSection } from "@/components/organism/GenericSection/GenericSection";
 import { HeroSection } from "@/components/organism/HeroSection/HeroSection";
 import { OurValuesSection } from "@/components/organism/OurValuesSection/OurValuesSection";
-import TeamSection from "@/components/organism/TeamSection/team-section";
+import TeamSection from "@/app/about/components/TeamSection/team-section";
 import Footer from "@/components/organism/Footer/footer";
 import { Stack } from "@mui/material";
 import VisionImage from "../../../public/images/about/Our-Vision-Image.jpg";
@@ -35,7 +35,6 @@ const HomePage: React.FC = () => {
       />
       <OurValuesSection title={OUR_VALUES_TITLE} />
       <TeamSection description="" imageUrl=""></TeamSection>
-      <Footer />
     </Stack>
   );
 };
